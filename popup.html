@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Web Recorder</title>
+    <style>
+        body {
+            min-width: 230px;
+        }
+
+        button {
+            height: 30px;
+            width: 100px;
+            color: white;
+            outline: none;
+            margin: 5px;
+            border: none;
+            border-radius: 2px;
+        }
+
+        textarea {
+            margin: 10px 5px 5px 5px;
+            width: 210px;
+            height: 200px;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .inline {
+            display: inline-block;
+        }
+
+        .start {
+            background-color: #0081a7;
+        }
+
+        .stop {
+            background-color: #f07167;
+        }
+
+        .disable {
+            cursor: not-allowed;
+            pointer-events: none;
+            color: #fff;
+            border-color: #a0a0a0;
+            background-color: #a0a0a0;
+        }
+    </style>
+</head>
+<body>
+<div class="center">
+    <div class="inline">
+        <button id="startBtn" class="start">Start</button>
+    </div>
+    <div class="inline">
+        <button id="stopBtn" class="stop">Stop</button>
+    </div>
+</div>
+<div class="center">
+    <textarea id="resultArea" class="result" readonly></textarea>
+</div>
+<script src="popup.js"></script>
+</body>
+</html>
