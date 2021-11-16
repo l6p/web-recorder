@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Web Recorder Options</title>
+    <style>
+        body {
+            min-width: 230px;
+        }
+
+        label {
+            font-size: 14px;
+            padding-right: 10px;
+        }
+
+        button {
+            height: 30px;
+            width: 100px;
+            color: white;
+            background-color: #0081a7;
+            outline: none;
+            margin: 5px;
+            border: none;
+            border-radius: 2px;
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body style="padding: 10px">
+<div style="margin: 10px">
+    <label for="urlPrefixDepth">URL Prefix Depth:</label>
+    <input id="urlPrefixDepth" type="number" style="max-width: 50px">
+</div>
+<div>
+    <button id="saveBtn">Save</button>
+</div>
+</body>
+<script src="options.js"></script>
+</html>

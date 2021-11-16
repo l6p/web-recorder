@@ -49,7 +49,7 @@ function getXPath(elem) {
 }
 
 function saveAction(type, url, xpath, value) {
-  chrome.storage.sync.get(["recording", "actions"], ({recording, actions}) => {
+  chrome.storage.local.get(["recording", "actions"], ({recording, actions}) => {
     if (!recording) {
       return;
     }
@@ -60,7 +60,7 @@ function saveAction(type, url, xpath, value) {
       xpath: xpath,
       value: value
     });
-    chrome.storage.sync.set({actions});
+    chrome.storage.local.set({actions});
 
     showHint(type, xpath, value)
   });
